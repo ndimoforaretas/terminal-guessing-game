@@ -18,6 +18,15 @@ const gameTitle = `
  \\____|\\__,_|_| |_| |_|\\___|
 `;
 
+// winning message
+const winningMessage = `
+========================================
+|                                      |
+|  Congratulations! You guessed it!    |
+|                                      |
+========================================
+`;
+
 // Function to generate a random number between min and max (inclusive)
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,8 +35,8 @@ function getRandomNumber(min, max) {
 // Function to start the number guessing game
 function startGame() {
   console.log(gameTitle);
-  console.log("I am thinking of a number between 1 and 100.");
-  console.log("Can you guess what it is?\n");
+  console.log("🤔 I am thinking of a number between 1 and 100.");
+  console.log("🤗 Can you guess what it is?\n");
 
   // Define the range for the random number
   const min = 1;
@@ -43,13 +52,13 @@ function startGame() {
   while (guess !== randomNumber && attempts < maxAttempts) {
     // Prompt the user for their guess
     guess = parseInt(
-      readlineSync.question(`Guess a number between ${min} and ${max}: `),
+      readlineSync.question(`🤓 Guess a number between ${min} and ${max}: `),
       10
     );
 
     // Check if the input is a valid number
     if (isNaN(guess)) {
-      console.log("\nPlease enter a valid number.\n");
+      console.log("\n🧐 Please enter a valid number.\n");
       continue;
     }
 
@@ -57,12 +66,12 @@ function startGame() {
 
     // Provide feedback based on the user's guess
     if (guess < randomNumber) {
-      console.log("\nToo low! Try again.\n");
+      console.log("\n🔽 Too low! Try again.\n");
     } else if (guess > randomNumber) {
-      console.log("\nToo high! Try again.\n");
+      console.log("\n🔼 Too high! Try again.\n");
     } else {
       console.log(
-        `\nCongratulations! You guessed the number ${randomNumber} in ${attempts} attempts.\n`
+        `\n✅ You guessed the number ${randomNumber} in ${attempts} attempts.\n`
       );
       return;
     }
@@ -71,7 +80,7 @@ function startGame() {
   // If the user runs out of attempts, reveal the number
   if (guess !== randomNumber) {
     console.log(
-      `\nSorry, you've used all ${maxAttempts} attempts. The number was ${randomNumber}.\n`
+      `\n🥺 Sorry, you've used all ${maxAttempts} attempts. The number was ${randomNumber}.\n`
     );
   }
 }

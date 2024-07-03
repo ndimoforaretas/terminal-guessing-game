@@ -1,6 +1,14 @@
 # Number Guessing Game
 
-Welcome to the Number Guessing Game! This is a simple interactive terminal application where you try to guess a randomly generated number within a specified range. It's a great way to practice your JavaScript skills and learn about loops, conditionals, and user input handling.
+![Guessing Game](guessing-game.png)
+
+Welcome to the Number Guessing Game! This is a simple interactive terminal application where you try to guess a randomly generated number within a specified range.
+
+It's a great way to practice your JavaScript skills and learn about:
+
+- loops,
+- conditionals,
+- and user input handling.
 
 ## Features
 
@@ -22,15 +30,13 @@ Welcome to the Number Guessing Game! This is a simple interactive terminal appli
 1. Clone the repository to your local machine:
 
    ```sh
-   // Replace `yourusername` with your GitHub username
-
-   git clone https://github.com/yourusername/number-guessing-game.git
+    git clone <Link from the GH Repo>
    ```
 
 2. Navigate to the project directory:
 
    ```sh
-   cd number-guessing-game
+   cd terminal-guessing game
    ```
 
 3. Install the required dependencies:
